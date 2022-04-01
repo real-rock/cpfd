@@ -156,3 +156,10 @@ zeromq=4.3.4=h23ab428_0
 zipp=3.7.0=pyhd3eb1b0_0
 zlib=1.2.11=h4dc903c_4
 zstd=1.4.9=h322a384_0
+
+ipython~=8.1.1
+matplotlib~=3.1.2
+numpy~=1.19.2
+pandas~=1.4.1
+seaborn~=0.11.2
+tensorflow~=2.4.1
