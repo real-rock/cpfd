@@ -5,7 +5,7 @@ import imageio
 import glob
 import numpy as np
 
-from cnn.utils.door_dataset import DoorDataset
+from models.utils.door_dataset import DoorDataset
 
 
 class ImageHandler:

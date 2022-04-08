@@ -2,7 +2,7 @@ from tensorflow.keras.utils import Sequence
 import numpy as np
 import sklearn
 
-from cnn.exceptions.empty_property import EmptyPropertyException
+from models.exceptions.empty_property import EmptyPropertyException
 
 BATCH_SIZE = 128
 IMAGE_SIZE = 224
