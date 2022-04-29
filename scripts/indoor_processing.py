@@ -32,7 +32,7 @@ def processing(lines):
 
 
 if __name__ == '__main__':
-    endpoints = ['134', '107', '120', '121', '124', '181', '196', '199']
+    endpoints = ['134', '107', '120', '121', '124', '181', '196', '199', '190']
     src_dir = '../datasets/indoor_particles/'
     output_dir = '../datasets/indoor_particles/csv/'
     cols = ['DATE', 'PM1', 'PM2.5', 'PM10']

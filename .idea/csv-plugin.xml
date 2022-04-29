@@ -45,6 +45,62 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/datasets/indoor_particles/csv/particle181.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/datasets/indoor_particles/csv/particle196.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/datasets/indoor_particles/csv/trimed/particle107.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/datasets/indoor_particles/csv/trimed/particle181.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/datasets/inout/air_purifier.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/datasets/inout/inout.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/datasets/inout/person.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/datasets/inout/window.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/datasets/summary/2022-04-05.csv">
           <value>
             <Attribute>
@@ -52,7 +108,14 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="/tutorial/HPF.csv">
+        <entry key="/datasets/summary/particles_inout.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/tutorial/aa.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

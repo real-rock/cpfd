@@ -1,10 +1,11 @@
 from tensorflow.keras.utils import Sequence
 import numpy as np
 import sklearn
+import cv2
 
 from models.exceptions.empty_property import EmptyPropertyException
 
-BATCH_SIZE = 128
+BATCH_SIZE = 32
 IMAGE_SIZE = 224
 
 
@@ -39,7 +40,19 @@ class DoorDataset(Sequence):
         images_fetch = self.images_array[index * self.batch_size: (index + 1) * self.batch_size]
         label_batch = self.labels[index * self.batch_size: (index + 1) * self.batch_size]
 
-        return images_fetch, label_batch
+        image_batch = np.zeros((images_fetch.shape[0], IMAGE_SIZE, IMAGE_SIZE, 3), dtype='float32')
+
+        for image_index in range(images_fetch.shape[0]):
+            image = cv2.resize(images_fetch[image_index], (IMAGE_SIZE, IMAGE_SIZE))
+            if self.augmentor is not None:
+                image = self.augmentor(image=image)['image']
+
+            if self.pre_func is not None:
+                image = self.pre_func(image)
+
+            image_batch[image_index] = image
+
+        return image_batch, label_batch
 
     def on_epoch_end(self):
         if self.shuffle:

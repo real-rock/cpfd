@@ -1,5 +1,6 @@
 from tensorflow.keras.utils import to_categorical
 from sklearn.model_selection import train_test_split
+import albumentations as A
 
 import imageio
 import glob
@@ -13,6 +14,12 @@ class ImageHandler:
         self.__src_dirs = src_dirs
         self.__classes = classes
         self.__file_ext = file_ext
+
+        self.__augmentor = A.Compose([
+            A.HorizontalFlip(p=0.5),
+            A.VerticalFlip(p=0.5),
+            A.ShiftScaleRotate(p=0.5)
+        ])
 
         self.__images, self.__labels = self.__read_and_label_images()
         print(f'image shape: {self.__images.shape}')
@@ -68,6 +75,6 @@ class ImageHandler:
         return (train_images, train_labels), (valid_images, valid_labels), (test_images, test_labels)
 
     def get_dataset(self, batch_size=32):
-        return DoorDataset(self.train_images, self.train_labels, batch_size=batch_size), \
+        return DoorDataset(self.train_images, self.train_labels, batch_size=batch_size, augmentor=self.__augmentor, shuffle=True), \
                 DoorDataset(self.valid_images, self.valid_labels, batch_size=batch_size), \
                 DoorDataset(self.test_images, self.test_labels, batch_size=batch_size)
